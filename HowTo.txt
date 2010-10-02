@@ -1,0 +1,29 @@
+# How to create file templates
+
+## Tips
+
+* Use TODOs to indicate what parts of the new file need to be customized.
+
+## IntelliJ
+
+IntelliJ uses the Velocity template engine. 
+
+* ${PACKAGE_NAME} - the name of the target package where the new class or interface will be created.
+* ${USER} - login name of the current user.
+* ${DATE} - the current system date.
+* ${TIME} - the current system time.
+* ${YEAR} - the current year.
+* ${MONTH} - the current month.
+* ${DAY} - the current day of the month.
+* ${HOUR} - the current hour.
+* ${MINUTE} - the current minute.
+
+You can also include other files with `#parse("template_name.extension")`. If you reference a variable name that doesn't exist, the user will be prompted in the dialog box to name the file.
+
+
+## Eclipse/ Flash Builder
+
+How to create file templates in Flash Builder 
+[http://help.adobe.com/en_US/flashbuilder/using/WS52085436-ABD3-4d4d-B5E2-41C668CF6847.htmlEclipse].
+
+
