@@ -1,6 +1,8 @@
 This repo contains shared file and live templates for IntelliJ and Flash Builder+SourceMate. 
 
-These templates assume you're building a standard Juice project and that you are using SpringActionScript. 
+All Juicers are welcome to create and share new templates. If you publish a new template please let Juicers know. If you see a problem, fix it! Let's build a tool that makes our lives better.
+
+The templates assume you're building a standard Juice project and that you are using Spring ActionScript. 
 
 There are two types of templates:
 
@@ -10,7 +12,6 @@ There are two types of templates:
 How to create file templates in Flash Builder 
 [http://help.adobe.com/en_US/flashbuilder/using/WS52085436-ABD3-4d4d-B5E2-41C668CF6847.htmlEclipse].
 
-All Juicers are welcome to create and share new templates. If you publish a new template please let Juicers know!
 
 # Installing the templates
 

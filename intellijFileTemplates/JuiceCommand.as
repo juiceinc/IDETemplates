@@ -11,25 +11,35 @@
 
 package ${PACKAGE_NAME}#if (${PACKAGE_NAME} != "") #end {
 
+  import flash.display.BitmapData;
+  import flash.display.IBitmapDrawable;
+  import flash.net.FileReference;
+  import flash.utils.ByteArray;
+
+  import mx.graphics.ImageSnapshot;
+  import mx.graphics.codec.PNGEncoder;
+
   import org.as3commons.lang.Assert;
   import org.springextensions.actionscript.core.command.ICommand;
 
   /**
-   * TODO: Class description
+   * A command to save a PNG image of a <code>DisplayObject</code> to the desktop
+   * file system.
+   * Note: This required Flash Player 10.
    *
-   * @author ${USER}
+   * @author ${AUTHO}
    */
   public class ${NAME} implements ICommand {
 
-    private var _value:String;
-
     /**
      * Constructor.
+     * Hi chris
      *
+     * @param imageSource
      */
-    public function ${NAME}(value:String) {
-      Assert.notNull(value, "The value argument must not be null.");
-      _value = value;
+    public function ${NAME}(imageSource:IBitmapDrawable) {
+      Assert.notNull(imageSource, "The imageSource argument must not be null.");
+      _imageSource = imageSource;
     }
 
 
@@ -39,7 +49,11 @@ package ${PACKAGE_NAME}#if (${PACKAGE_NAME} != "") #end {
      * @return this command
      */
     public function execute():* {
-      // Do something to _value
+      const bitmapData:BitmapData = ImageSnapshot.captureBitmapData(_imageSource);
+      const encoder:PNGEncoder = new PNGEncoder();
+      const bytes:ByteArray = encoder.encode(bitmapData);
+      const fileReference:FileReference = new FileReference();
+      fileReference.save(bytes, "unnamed1.png");
       return this;
     }
 
